@@ -49,7 +49,6 @@ Keterangan :\
 ### Subnet Tree
 
 ![image](https://user-images.githubusercontent.com/77782259/145576019-e57c86fd-c4e6-4421-9913-8c29e258a3c5.png)
-
 ## CONFIG NODE
 ### FOOSHA
 ```shell
@@ -62,12 +61,12 @@ hwaddress ether 5e:0d:2e:c6:9b:9a
 
 auto eth1
 iface eth1 inet static
-	address 10.38.7.145
+	address 10.41.7.145
 	netmask 255.255.255.252
 
 auto eth2
 iface eth2 inet static
-	address 10.38.7.149
+	address 10.41.7.149
 	netmask 255.255.255.252
 ```
 ### WATER7
@@ -77,24 +76,24 @@ iface lo inet loopback
 
 auto eth0
 iface eth0 inet static
-	address 10.38.7.146
+	address 10.41.7.146
 	netmask 255.255.255.252
-  	gateway 10.38.7.145
+  	gateway 10.41.7.145
   
 auto eth1
 iface eth1 inet static
-	address 10.38.7.1
+	address 10.41.7.1
 	netmask 255.255.255.128
   
 auto eth2
 iface eth2 inet static
-  address 10.38.7.129
+  address 10.41.7.129
   netmask 255.255.255.248
 
 
 auto eth3
 iface eth3 inet static
-  address 10.38.0.1
+  address 10.41.0.1
   netmask 255.255.252.0
 ```
 ### GUANHAO
@@ -104,24 +103,24 @@ iface lo inet loopback
 
 auto eth0
 iface eth0 inet static
-	address 10.38.7.150
+	address 10.41.7.150
 	netmask 255.255.255.252
-  	gateway 10.38.7.149
+  	gateway 10.41.7.149
   
 auto eth1
 iface eth1 inet static
-	address 10.38.6.1
+	address 10.41.6.1
 	netmask 255.255.255.0
   
 auto eth2
 iface eth2 inet static
-  address 10.38.7.137
+  address 10.41.7.137
   netmask 255.255.255.248
 
 
 auto eth3
 iface eth3 inet static
-  address 10.38.4.1
+  address 10.41.4.1
   netmask 255.255.254.0
 ```
 ### Blueno
@@ -130,25 +129,25 @@ auto eth0
 iface eth0 inet static
 #auto eth0
 #iface eth0 inet dhcp
-	address 10.38.7.2
+	address 10.41.7.2
 	netmask 255.255.255.128
-	gateway 10.38.7.1
+	gateway 10.41.7.1
 ```
 ### Doriki
 ```shell
 auto eth0
 iface eth0 inet static
-	address 10.38.7.130
+	address 10.41.7.130
 	netmask 255.255.255.248
-	gateway 10.38.7.129	
+	gateway 10.41.7.129	
 ```
 ### Jipangu
 ```shell
 auto eth0
 iface eth0 inet static
-	address 10.38.7.131
+	address 10.41.7.131
 	netmask 255.255.255.248
-	gateway 10.38.7.129
+	gateway 10.41.7.129
 ```
 ### Cipher
 ```shell
@@ -156,9 +155,9 @@ auto eth0
 iface eth0 inet static
 #auto eth0
 #iface eth0 inet dhcp
-	address 10.38.0.2
+	address 10.41.0.2
 	netmask 255.255.252.0
-	gateway 10.38.0.1
+	gateway 10.41.0.1
 ```
 ### Fukurou
 ```shell
@@ -166,25 +165,25 @@ auto eth0
 iface eth0 inet static
 #auto eth0
 #iface eth0 inet dhcp
-	address 10.38.4.2
+	address 10.41.4.2
 	netmask 255.255.254.0
-	gateway 10.38.4.1
+	gateway 10.41.4.1
 ```
 ### Maingate
 ```shell
 auto eth0
 iface eth0 inet static
-	address 10.38.7.139
+	address 10.41.7.139
 	netmask 255.255.255.248
-	gateway 10.38.7.137
+	gateway 10.41.7.137
 ```
 ### Jorge
 ```shell
 auto eth0
 iface eth0 inet static
-	address 10.38.7.138
+	address 10.41.7.138
 	netmask 255.255.255.248
-	gateway 10.38.7.137
+	gateway 10.41.7.137
 ```
 ### Elena
 ```shell
@@ -192,9 +191,9 @@ auto eth0
 iface eth0 inet static
 #auto eth0
 #iface eth0 inet dhcp
-	address 10.38.6.2
+	address 10.41.6.2
 	netmask 255.255.255.0
-	gateway 10.38.6.2
+	gateway 10.41.6.2
 ```
 # C. Setelah melakukan subnetting, Kalian juga diharuskan melakukan Routing agar setiap perangkat pada jaringan tersebut dapat terhubung.
 ## Routing
@@ -202,19 +201,19 @@ iface eth0 inet static
 ```shell
 # !/bin/sh
 
-route add -net 10.38.7.0 netmask 255.255.255.128 gw 10.38.7.146
-route add -net 10.38.7.128 netmask 255.255.255.248 gw 10.38.7.146
-route add -net 10.38.0.0 netmask 255.255.252.0 gw 10.38.7.146
+route add -net 10.41.7.0 netmask 255.255.255.128 gw 10.41.7.146
+route add -net 10.41.7.128 netmask 255.255.255.248 gw 10.41.7.146
+route add -net 10.41.0.0 netmask 255.255.252.0 gw 10.41.7.146
 
-route add -net 10.38.6.0 netmask 255.255.255.0 gw 10.38.7.150
-route add -net 10.38.7.136 netmask 255.255.255.248 gw 10.38.7.150
-route add -net 10.38.4.0 netmask 255.255.254.0 gw 10.38.7.150
+route add -net 10.41.6.0 netmask 255.255.255.0 gw 10.41.7.150
+route add -net 10.41.7.136 netmask 255.255.255.248 gw 10.41.7.150
+route add -net 10.41.4.0 netmask 255.255.254.0 gw 10.41.7.150
 ```
 ### WATER7
 ```shell
 # !/bin/sh
 
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.38.7.145
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.41.7.145
 ```
 ### Doriki (DNS Server)
 nano config.sh
@@ -239,73 +238,73 @@ INTERFACES="eth0"
 nano dhcpd.conf
 ```shell
 # Blueno
-subnet 10.38.7.0 netmask 255.255.255.128 {
-    range 10.38.7.2 10.38.7.126;
-    option routers 10.38.7.1;
-    option broadcast-address 10.38.7.127;
-    option domain-name-servers 10.38.7.130;
+subnet 10.41.7.0 netmask 255.255.255.128 {
+    range 10.41.7.2 10.41.7.126;
+    option routers 10.41.7.1;
+    option broadcast-address 10.41.7.127;
+    option domain-name-servers 10.41.7.130;
     default-lease-time 360;
     max-lease-time 7200;
 }
 
 # Cipher
-subnet 10.38.0.0 netmask 255.255.252.0	 {
-    range 10.38.0.2 10.38.3.254;
-    option routers 10.38.0.1;
-    option broadcast-address 10.38.3.255;
-    option domain-name-servers 10.38.7.130;
+subnet 10.41.0.0 netmask 255.255.252.0	 {
+    range 10.41.0.2 10.41.3.254;
+    option routers 10.41.0.1;
+    option broadcast-address 10.41.3.255;
+    option domain-name-servers 10.41.7.130;
     default-lease-time 720;
     max-lease-time 7200;
 }
 
 # Fukurou
-subnet 10.38.4.0 netmask 255.255.254.0 {
-    range 10.38.4.2 10.38.5.254;
-    option routers 10.38.4.1;
-    option broadcast-address 10.38.5.255;
-    option domain-name-servers 10.38.7.130;
+subnet 10.41.4.0 netmask 255.255.254.0 {
+    range 10.41.4.2 10.41.5.254;
+    option routers 10.41.4.1;
+    option broadcast-address 10.41.5.255;
+    option domain-name-servers 10.41.7.130;
     default-lease-time 720;
     max-lease-time 7200;
 }
 
 # Elena
-subnet 10.38.6.0 netmask 255.255.255.0 {
-    range 10.38.6.2 10.38.6.254;
-    option routers 10.38.6.1;
-    option broadcast-address 10.38.6.255;
-    option domain-name-servers 10.38.7.130;
+subnet 10.41.6.0 netmask 255.255.255.0 {
+    range 10.41.6.2 10.41.6.254;
+    option routers 10.41.6.1;
+    option broadcast-address 10.41.6.255;
+    option domain-name-servers 10.41.7.130;
     default-lease-time 720;
     max-lease-time 7200;
 }
 
 # Routing dari Jipangu ke router Water7
-subnet 10.38.7.128 netmask 255.255.255.248 {
-        option routers 10.38.7.129;
+subnet 10.41.7.128 netmask 255.255.255.248 {
+        option routers 10.41.7.129;
 }
 
 # Routing dari Jipangu ke router Guanhao
-subnet 10.38.7.136 netmask 255.255.255.248 {
-        option routers 10.38.7.137;
+subnet 10.41.7.136 netmask 255.255.255.248 {
+        option routers 10.41.7.137;
 }
 
 # Routing dari Jipangu ke router Foosha
-subnet 10.38.7.144 netmask 255.255.255.252 {
-        option routers 10.38.7.145;
+subnet 10.41.7.144 netmask 255.255.255.252 {
+        option routers 10.41.7.145;
 }
 
 # Routing dari Foosha ke Guanhao
-subnet 10.38.7.148 netmask 255.255.255.252 {
-        option routers 10.38.7.149;
+subnet 10.41.7.148 netmask 255.255.255.252 {
+        option routers 10.41.7.149;
 }
 
 # Water7
-#subnet 10.38.7.144 netmask 255.255.255.252 {
-#        option routers 10.38.7.145;
+#subnet 10.41.7.144 netmask 255.255.255.252 {
+#        option routers 10.41.7.145;
 #}
 
 # Guanhao
-#subnet 10.38.7.148 netmask 255.255.255.252 {
-#        option routers 10.38.7.149;
+#subnet 10.41.7.148 netmask 255.255.255.252 {
+#        option routers 10.41.7.149;
 #}
 
 host FOOSHA {
@@ -326,7 +325,7 @@ service isc-dhcp-relay start
 nano /etc/default/isc-dhcp-relay
 ```shell
 # What servers should the DHCP relay forward requests to?
-SERVERS="10.38.7.131"
+SERVERS="10.41.7.131"
 
 # On what interfaces should the DHCP relay (dhrelay) serve DHCP requests?
 INTERFACES="eth1 eth2"
@@ -347,7 +346,7 @@ service isc-dhcp-relay start
 nano /etc/default/isc-dhcp-relay
 ```shell
 # What servers should the DHCP relay forward requests to?
-SERVERS="10.38.7.131"
+SERVERS="10.41.7.131"
 
 # On what interfaces should the DHCP relay (dhrelay) serve DHCP requests?
 INTERFACES="eth1 eth2 eth3"
@@ -368,7 +367,7 @@ service isc-dhcp-relay start
 nano /etc/default/isc-dhcp-relay
 ```shell
 # What servers should the DHCP relay forward requests to?
-SERVERS="10.38.7.131"
+SERVERS="10.41.7.131"
 
 # On what interfaces should the DHCP relay (dhrelay) serve DHCP requests?
 INTERFACES="eth1 eth2 eth3"
@@ -419,7 +418,7 @@ Elena
 #1. Agar topologi yang kalian buat dapat mengakses keluar, kalian diminta untuk mengkonfigurasi Foosha menggunakan iptables, tetapi Luffy tidak ingin menggunakan MASQUERADE.
 nano config.sh on Foosha
 ```shell
-iptables -t nat -A POSTROUTING -s 10.38.0.0/21 -o eth0 -j SNAT --to-source 192.168.122.98
+iptables -t nat -A POSTROUTING -s 10.41.0.0/21 -o eth0 -j SNAT --to-source 192.168.122.98
 ```
 Yang Butuh Update (Water7, Doriki, Jipangu, dan Guanhao)
 ```shell
@@ -432,24 +431,24 @@ Screenshot
 # 2. Kalian diminta untuk mendrop semua akses HTTP dari luar Topologi kalian pada server yang memiliki ip DHCP dan DNS Server demi menjaga keamanan.
 nano config.sh on Foosha
 ```shell
-iptables -A FORWARD -p tcp --dport 80 -d 10.38.7.128/29 -i eth0 -j DROP
+iptables -A FORWARD -p tcp --dport 80 -d 10.41.7.128/29 -i eth0 -j DROP
 ```
 ```shell
 # doriki DNS
-iptables -A INPUT -s 10.38.7.130 -j DROP
+iptables -A INPUT -s 10.41.7.130 -j DROP
 # subnet a2, a3, a6, a7
-iptables -A INPUT -s 10.38.7.0/25 -j DROP
-iptables -A INPUT -s 10.38.0.0/22 -j DROP
-iptables -A INPUT -s 10.38.4.0/23 -j DROP
-iptables -A INPUT -s 10.38.6.0/24 -j DROP
+iptables -A INPUT -s 10.41.7.0/25 -j DROP
+iptables -A INPUT -s 10.41.0.0/22 -j DROP
+iptables -A INPUT -s 10.41.4.0/23 -j DROP
+iptables -A INPUT -s 10.41.6.0/24 -j DROP
 ```
 ```shell
 iptables -A INPUT -p tcp --dport 80 -j DROP
 ```
 Test
 ```shell
-nmap 10.38.7.128
-nmap 10.38.7.131
+nmap 10.41.7.128
+nmap 10.41.7.131
 ```
 Screenshot
 
@@ -465,14 +464,14 @@ Kemudian kalian diminta untuk membatasi akses ke Doriki yang berasal dari subnet
 # 4. Akses dari subnet Blueno dan Cipher hanya diperbolehkan pada pukul 07.00 - 15.00 pada hari Senin sampai Kamis
 ### Doriki
 ```shell
-iptables -A INPUT -s 10.38.7.0/25 -m time --timestart 07:00 --timestop 15:00 --weekdays Mon,Tue,Wed,Thu -j ACCEPT
-iptables -A INPUT -s 10.38.7.0/25 -m time --timestart 15:01 --timestop 23:59 -j REJECT
-iptables -A INPUT -s 10.38.7.0/25 -m time --timestart 00:00 --timestop 06:59 -j REJECT
-iptables -A INPUT -s 10.38.7.0/25 -m time --timestart 07:00 --timestop 15:00 --weekdays Fri,Sat,Sun -j REJECT
+iptables -A INPUT -s 10.41.7.0/25 -m time --timestart 07:00 --timestop 15:00 --weekdays Mon,Tue,Wed,Thu -j ACCEPT
+iptables -A INPUT -s 10.41.7.0/25 -m time --timestart 15:01 --timestop 23:59 -j REJECT
+iptables -A INPUT -s 10.41.7.0/25 -m time --timestart 00:00 --timestop 06:59 -j REJECT
+iptables -A INPUT -s 10.41.7.0/25 -m time --timestart 07:00 --timestop 15:00 --weekdays Fri,Sat,Sun -j REJECT
 
-iptables -A INPUT -s 10.38.0.0/22 -m time --timestart 07:00 --timestop 15:00 --weekdays Mon,Tue,Wed,Thu -j ACCEPT
-iptables -A INPUT -s 10.38.0.0/22 -m time --timestart 15:01 --timestop 06:59 -j REJECT
-iptables -A INPUT -s 10.38.0.0/22 -m time --timestart 07:00 --timestop 15:00 --weekdays Fri,Sat,Sun -j REJECT
+iptables -A INPUT -s 10.41.0.0/22 -m time --timestart 07:00 --timestop 15:00 --weekdays Mon,Tue,Wed,Thu -j ACCEPT
+iptables -A INPUT -s 10.41.0.0/22 -m time --timestart 15:01 --timestop 06:59 -j REJECT
+iptables -A INPUT -s 10.41.0.0/22 -m time --timestart 07:00 --timestop 15:00 --weekdays Fri,Sat,Sun -j REJECT
 ```
 ```shell
 date
@@ -491,9 +490,9 @@ Screenshot
 
 5. Akses dari subnet Elena dan Fukuro hanya diperbolehkan pada pukul 15.01 hingga pukul 06.59 setiap harinya.
 ```shell
-iptables -A INPUT -s 10.38.6.0/24 -m time --timestart 15:01 --timestop 06:59 -j REJECT
+iptables -A INPUT -s 10.41.6.0/24 -m time --timestart 15:01 --timestop 06:59 -j REJECT
 
-iptables -A INPUT -s 10.38.4.0/23 -m time --timestart 15:01 --timestop 06:59 -j REJECT
+iptables -A INPUT -s 10.41.4.0/23 -m time --timestart 15:01 --timestop 06:59 -j REJECT
 ```
 Screenshot
 
@@ -501,11 +500,10 @@ Selain itu di reject
 
 6. Karena kita memiliki 2 Web Server, Luffy ingin Guanhao disetting sehingga setiap request dari client yang mengakses DNS Server akan didistribusikan secara bergantian pada Jorge dan Maingate
 ```shell
-iptables -t nat -A PREROUTING -p tcp -d 10.38.7.130 -m statistic --mode nth --every 2 --packet 0 -j DNAT --to-destination 10.38.7.138:80
-iptables -t nat -A PREROUTING -p tcp -d 10.38.7.130 -j DNAT --to-destination 10.38.7.139:80
-iptables -t nat -A POSTROUTING -p tcp -d 10.38.7.138 --dport 80 -j SNAT --to-source 10.38.7.130
-iptables -t nat -A POSTROUTING -p tcp -d 10.38.7.139 --dport 80 -j SNAT --to-source 10.38.7.130
+iptables -t nat -A PREROUTING -p tcp -d 10.41.7.130 -m statistic --mode nth --every 2 --packet 0 -j DNAT --to-destination 10.41.7.138:80
+iptables -t nat -A PREROUTING -p tcp -d 10.41.7.130 -j DNAT --to-destination 10.41.7.139:80
+iptables -t nat -A POSTROUTING -p tcp -d 10.41.7.138 --dport 80 -j SNAT --to-source 10.41.7.130
+iptables -t nat -A POSTROUTING -p tcp -d 10.41.7.139 --dport 80 -j SNAT --to-source 10.41.7.130
 ```
 Luffy berterima kasih pada kalian karena telah membantunya. Luffy juga mengingatkan agar semua aturan iptables harus disimpan pada sistem atau paling tidak kalian menyediakan script sebagai backup
-
 
