@@ -376,6 +376,7 @@ INTERFACES="eth1 eth2 eth3"
 OPTIONS=""
 ```
 ### Maingate (Web Server)
+
 nano config.sh
 ```shell
 # !/bin/sh
@@ -386,6 +387,7 @@ apt-get install isc-dhcp-relay -y
 service isc-dhcp-relay start
 ```
 ### Jorge (Web Server)
+
 nano config.sh
 ```shell
 # !/bin/sh
@@ -393,7 +395,9 @@ nano config.sh
 apt-get update
 ```
 ### Blueno (Client)
+
 All
+
 Config ditambah:
 ```shell
 auto eth0
@@ -415,7 +419,7 @@ Elena
 ```shell
 # !/bin/sh
 ```
-#1. Agar topologi yang kalian buat dapat mengakses keluar, kalian diminta untuk mengkonfigurasi Foosha menggunakan iptables, tetapi Luffy tidak ingin menggunakan MASQUERADE.
+# 1. Agar topologi yang kalian buat dapat mengakses keluar, kalian diminta untuk mengkonfigurasi Foosha menggunakan iptables, tetapi Luffy tidak ingin menggunakan MASQUERADE.
 nano config.sh on Foosha
 ```shell
 iptables -t nat -A POSTROUTING -s 10.41.0.0/21 -o eth0 -j SNAT --to-source 192.168.122.98
