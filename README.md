@@ -128,12 +128,7 @@ iface eth3 inet static
 ### Blueno
 ```shell
 auto eth0
-iface eth0 inet static
-#auto eth0
-#iface eth0 inet dhcp
-	address 10.41.7.2
-	netmask 255.255.255.128
-	gateway 10.41.7.1
+iface eth0 inet dhcp
 ```
 ### Doriki
 ```shell
@@ -154,12 +149,7 @@ iface eth0 inet static
 ### Cipher
 ```shell
 auto eth0
-iface eth0 inet static
-#auto eth0
-#iface eth0 inet dhcp
-	address 10.41.0.2
-	netmask 255.255.252.0
-	gateway 10.41.0.1
+iface eth0 inet dhcp
 ```
 ### Fukurou
 ```shell
