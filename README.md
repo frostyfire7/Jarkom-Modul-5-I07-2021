@@ -21,6 +21,8 @@ Keterangan :\
 
 ### Subnet
 
+![image](https://user-images.githubusercontent.com/77782259/145664897-dc3858b9-e0fe-4552-9686-3c86c4f55a3e.png)
+
 ![image](https://user-images.githubusercontent.com/77782259/145575912-62376fd7-1953-469b-a1f9-b9a5f63febf2.png)
 
 ### Tabel Subnet
